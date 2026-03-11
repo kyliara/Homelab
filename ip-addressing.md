@@ -1,15 +1,17 @@
 ## Vlan IP Addressing Plan
-> All addresses reserved/statically allocated, aside from the IoT devices in vlan4. 
+> All addresses to be statically allocated aside from the IoT devices in vlan4. 
 
 **vlan"0" - management**
 - vlan"0" int: 10.0.53.1
 - iDRAC8: 10.0.53.80
 - HP managed switch: 10.0.53.40
-- UniFi WAP controller: 10.0.53.20
+- UniFi WAP controller VM: 10.0.53.20
+- UniFI WAP device: 10.0.53.30
 
 **vlan1 - Server**
 - vlan1 int: 10.0.1.1
 - 4x1Gb NIC (EtherChannel/LACP): 10.0.1.10
+- UniFi WAP controller VM: 10.0.1.20
 
 **vlan2 - Semi Trusted**
 - vlan2 int: 10.0.2.1
@@ -35,4 +37,4 @@
 - Google Home Mini: 10.0.4.10
 - Google Nest Hub: 10.0.4.20
 - Ikea Gateway *{~wired}*: 10.0.4.30
-- IoT bulbs/switches/sensors: *{DHCP pool}*: 10.0.4.100-199
+- IoT bulbs/switches/sensors: DHCP pool-10.0.4.100-199
