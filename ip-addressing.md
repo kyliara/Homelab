@@ -2,15 +2,16 @@
 > All addresses to be statically allocated aside from the IoT devices in vlan4. 
 
 **vlan"0" - management**
-- vlan"0" int: 10.0.53.1
-- iDRAC8: 10.0.53.80
-- HP managed switch: 10.0.53.40
-- UniFi WAP controller VM: 10.0.53.20
-- UniFI WAP device: 10.0.53.30
+- vlan"0" int: 10.0.x.1
+- iDRAC8: 10.0.x.80
+- HP managed switch: 10.0.x.40
+- UniFi WAP controller VM: 10.0.x.20
+- UniFI WAP device: 10.0.x.30
 
 **vlan1 - Server**
 - vlan1 int: 10.0.1.1
 - 4x1Gb NIC (EtherChannel/LACP): 10.0.1.10
+  > Port Channel will be tagged with both vlan1 and vlan"0" to allow management access.
 - UniFi WAP controller VM: 10.0.1.20
 
 **vlan2 - Semi Trusted**
